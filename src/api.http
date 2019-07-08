@@ -1,0 +1,27 @@
+@token = Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjkwYjRjZGUyMzc4N2RjZDhjMmUzMzVmODUwYzM0NDcwIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1NDE5NjU4MjksImV4cCI6MTU0NDU1NzgyOSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9yZXNvdXJjZXMiLCJhdWRpb2Jvb2thcHAiXSwiY2xpZW50X2lkIjoiYXVkaW9ib29rLnJvLmNsaWVudCIsInN1YiI6ImxldmluaHRpbkBnbWFpbC5jb20iLCJhdXRoX3RpbWUiOjE1NDE5NjU4MjksImlkcCI6ImxvY2FsIiwiaWQiOiIxIiwibmFtZSI6ImxldmluaHRpbiIsInByZWZlcnJlZF91c2VybmFtZSI6ImxldmluaHRpbiIsImVtYWlsIjoibGV2aW5odGluQGdtYWlsLmNvbSIsInNjb3BlIjpbImF1ZGlvYm9va2FwcCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXX0.cipVqRVkYyPZ1-bseUdH0Awqbhy5PDyF1IKd55Uix03fga7ilTHDhHc72MN0D1Bwx4g74tAKNEK3ZUCLazwsWaCflR4yraLp1DhAqTw4DEBNsMT2rBRYWVb_ZsFwde6hP34Tb1Q8ASM2NeIK69RFiuumPXQ9tGz0-UrbWuoi7ViNMH944ydknCgmdqqJ6wihC-D9Uq81R8nSiYW1t3CmLZubICoW-djMoczTtQmhbZf9MLloTfNR7q0RniV_9xSEmS3R_qIFyet7CTnYMTeMWnay_AcEXZkGJ2zk8HQtYAqlSZkOaaCOJ6siX6Ci31yKqqZ-dqlUYkp0s7x7V_O9Kw
+
+###
+POST http://localhost:5000/connect/token  HTTP/1.1
+Authorization: Basic YXVkaW9ib29rLnJvLmNsaWVudDphdWRpb2Jvb2suc2VjcmV0
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password
+&scope=audiobookapp%20offline_access
+&username=levinhtin@gmail.com
+&password=123123
+
+###
+GET http://localhost:5000/api/devices HTTP/1.1
+    ?page=1
+    &limit=20
+
+POST http://localhost:5000/api/devices  HTTP/1.1
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+	"store_id": "123112",
+	"username": "tinlvv",
+    "device_token": "e87cb909fed2ae51fdd5efd748955e149f0719b6a6fca62d201c5839a6e67973",
+    "device_type": "2"
+}

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  netcore.api:
+    image: audiobook/api
+    build:
+      context: .
+      dockerfile: NetCore.API/Dockerfile

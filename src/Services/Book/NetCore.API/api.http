@@ -1,0 +1,12 @@
+
+###
+POST http://localhost:5000/connect/token HTTP/1.1
+Authorization: Basic cm8uY2xpZW50OnJvLnNlY3JldA==
+Content-Type: application/json
+{
+    "grant_type": "password",
+    "scope": "offline_access",
+    "username": "tinlvv",
+    "password": "123123"
+}
+###
